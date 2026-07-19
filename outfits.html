@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Outfits — Aaron Snider</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="gallery-page" data-gallery-file="outfits.json">
+
+    <header class="gallery-header">
+
+        <a class="small-box-logo" href="index.html">
+            Aaron Snider
+        </a>
+
+        <nav>
+            <a class="active" href="outfits.html">Outfits</a>
+            <a href="Experiences.html">Experiences</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+    </header>
+
+    <main class="lookbook">
+
+        <section class="featured-area">
+
+            <button
+                id="featured-button"
+                class="featured-button"
+                type="button"
+                aria-label="Open selected image"
+            >
+                <img
+                    id="featured-image"
+                    src=""
+                    alt="Selected outfit"
+                >
+            </button>
+
+        </section>
+
+        <aside class="thumbnail-area">
+
+            <div
+                id="thumbnail-grid"
+                class="thumbnail-grid"
+            ></div>
+
+            <div class="gallery-controls">
+
+                <button id="previous-item" type="button">
+                    ← Previous
+                </button>
+
+                <p>
+                    <span id="current-number">0</span>
+                    of
+                    <span id="total-number">0</span>
+                </p>
+
+                <button id="next-item" type="button">
+                    Next →
+                </button>
+
+            </div>
+
+        </aside>
+
+        <section class="item-information">
+
+            <a class="box-logo gallery-logo" href="index.html">
+                Aaron Snider
+            </a>
+
+            <div>
+                <h1 id="item-title">Loading…</h1>
+                <p id="item-description"></p>
+            </div>
+
+            <a class="archive-link" href="#thumbnail-grid">
+                All outfits
+            </a>
+
+        </section>
+
+    </main>
+
+    <div id="lightbox" class="lightbox" hidden>
+
+        <button
+            id="lightbox-close"
+            class="lightbox-close"
+            type="button"
+            aria-label="Close image"
+        >
+            ×
+        </button>
+
+        <img id="lightbox-image" src="" alt="Fullscreen outfit">
+
+    </div>
+
+    <script src="gallery.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

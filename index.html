@@ -1,36 +1,154 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
 
-<title>My Portfolio</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<link rel="stylesheet" href="style.css">
+    <title>Aaron Snider</title>
 
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="home-page">
 
-<h1>Your Name</h1>
+    <main class="home-shell">
 
-<p>Software Developer</p>
+        <header class="home-header">
 
-<h2>Projects</h2>
+            <a class="box-logo" href="index.html">
+                Aaron Snider
+            </a>
 
-<div class="project">
+            <p id="clock" class="clock">
+                California time
+            </p>
 
-Project One
+        </header>
 
-</div>
+        <nav class="home-navigation" aria-label="Main navigation">
 
-<div class="project">
+            <a href="outfits.html">Outfits</a>
 
-Project Two
+            <a href="experiences.html">Experiences</a>
 
-</div>
+            <a href="#about">About Me</a>
 
-<script src="script.js"></script>
+            <a href="#experience">Experience</a>
 
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <section id="about" class="home-section">
+
+            <h1>About Me</h1>
+
+            <p>
+                Yo! I'm Aaron, a 15 year old high school student from California. Ever since seventh grade,
+                I've become addicted to streetwear, luxury fashion, and the culture surrounding it. I love to express myself through my outfits and
+                share my passion for fashion with others. I hope to one day work in the fashion industry, whether it be as a designer, salesperson, looking over financials, or influencer.
+                 In my free time, I enjoy exploring new trends, attending fashion events, and connecting with like-minded individuals who share my love for style.    
+
+            </p>
+
+        </section>
+
+        <section id="experience" class="home-section">
+
+            <h2>Experience</h2>
+
+            <p>
+                I attend Castro Valley High School, where I am a member of the Interact Club where I 
+                volunteer in community service events and fundraisers. Apart from that, I also went to NABA's ACAP
+                summer camp (which you can read more about in the Experiences tab) where I networked to further my knowledge of the fashion industry and learned about the different career paths in fashion.
+                I also have a Depop store where I sell streetwear and vintage clothing, which has allowed me to gain experience in e-commerce and marketing.
+                 Through these experiences, I have developed a strong work ethic, creativity, and a passion for fashion that I hope to continue to pursue in the future.
+
+        </section>
+
+        <section id="contact" class="home-section">
+
+            <h2>Contact</h2>
+
+            <a href="mailto:aaronrsnider@gmail.com">
+                aaronrsnider@gmail.com
+            </a>
+
+        </section>
+
+        <footer class="home-footer">
+
+            <div class="social-links">
+
+                <a
+                    href="https://www.instagram.com/aaronsni/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/aaron-snider-835ba9377/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://www.depop.com/evlsu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Depop
+                </a>
+
+            </div>
+
+            <p>
+                © <span id="copyright-year"></span> Aaron Snider
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script>
+        function updateCaliforniaClock() {
+            const clock = document.getElementById("clock");
+
+            const now = new Date();
+
+            const date = new Intl.DateTimeFormat("en-US", {
+                timeZone: "America/Los_Angeles",
+                month: "2-digit",
+                day: "2-digit",
+                year: "numeric"
+            }).format(now);
+
+            const time = new Intl.DateTimeFormat("en-US", {
+                timeZone: "America/Los_Angeles",
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit",
+                hour12: true
+            }).format(now);
+
+            clock.textContent = `${date} ${time} Cali`;
+        }
+
+        updateCaliforniaClock();
+
+        setInterval(updateCaliforniaClock, 1000);
+
+        document.getElementById("copyright-year").textContent =
+            new Date().getFullYear();
+    </script><script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
